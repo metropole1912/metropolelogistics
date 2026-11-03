@@ -122,7 +122,7 @@ class LocalDB:
         seed = json.loads((config.ROOT / "supabase" / "seed_data.json").read_text())
         slug = lambda s: re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
         return {
-            "countries": [{"iso": c["iso"], "name": c["name"], "lon": c["c"][0], "lat": c["c"][1], "metals": c["metals"], "sectors": c.get("sectors", ["metals"]), "region": c.get("region", "africa")} for c in seed["COUNTRIES"]],
+            "countries": [{"iso": c["iso"], "name": c["name"], "lon": c["c"][0], "lat": c["c"][1], "metals": c["metals"], "sectors": c.get("sectors", ["metals"]), "region": c.get("region", "africa"), "tier": c.get("tier", "desk")} for c in seed["COUNTRIES"]],
             "assets": [{"id": slug(m[0]), "name": m[0], "iso": m[1], "metals": m[2], "operator": m[3], "lon": m[4], "lat": m[5], "status": m[6],
                         "kind": (m[8] if len(m) > 8 and m[8] else ("plant" if m[6] == "plant" else "mine")), "aliases": []} for m in seed["MINES"]],
             "ports": [{"id": slug(p[0]), "name": p[0], "iso": p[1], "lon": p[2], "lat": p[3]} for p in seed["PORTS"]],

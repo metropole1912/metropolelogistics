@@ -6,6 +6,8 @@
   python -m collector sanctions        screen operators and watch-listed vessels against the OFAC sanctions list
   python -m collector prices           pull daily benchmark prices from the US EIA (needs EIA_API_KEY)
   python -m collector status           show what is in the database
+  python -m collector pulse            read new border reports from the form, update Corridor Pulse, send delay alerts
+  python -m collector pulse-brief      draft the weekly Copperbelt Corridor brief and email it to ADMIN_EMAIL
 """
 import argparse
 import sys
@@ -131,6 +133,11 @@ def main(argv=None):
     pr = sub.add_parser("prices")
     pr.add_argument("--sample", action="store_true")
     sub.add_parser("status")
+    pu = sub.add_parser("pulse")
+    pu.add_argument("--sample", action="store_true", help="use collector/fixtures/pulse_sample.csv (synthetic) and the local test database")
+    pu.add_argument("--date", help="treat this day (YYYY-MM-DD) as today")
+    pb = sub.add_parser("pulse-brief")
+    pb.add_argument("--sample", action="store_true")
     a = p.parse_args(argv)
     if a.cmd == "run":
         run(sample=a.sample, send_email=not a.no_email)
@@ -142,6 +149,12 @@ def main(argv=None):
         prices(sample=a.sample)
     elif a.cmd == "status":
         status()
+    elif a.cmd == "pulse":
+        from . import pulse
+        pulse.run(sample=a.sample, today=a.date)
+    elif a.cmd == "pulse-brief":
+        from . import pulse
+        pulse.weekly_brief(sample=a.sample)
 
 
 if __name__ == "__main__":

@@ -68,9 +68,14 @@ def find_duplicate(t, recent, loc=None):
     return None
 
 
-def review_status(t):
+def review_status(t, ref=None):
     if t["severity"] >= config.REVIEW_FROM_SEVERITY or t["confidence"] < config.REVIEW_BELOW_CONFIDENCE:
         return "pending"
+    # events in automated-tier countries always wait for a human unless MONITORED_AUTO=1
+    if ref is not None and config.env("MONITORED_AUTO", "") != "1":
+        c = next((c for c in ref["countries"] if c["iso"] == t["country_iso3"]), None)
+        if c and c.get("tier", "desk") != "desk":
+            return "pending"
     return "auto"
 
 
@@ -79,7 +84,7 @@ def to_event(t, raw, ref):
     return {
         "date": t["event_date"], "iso": t["country_iso3"], "lon": lon, "lat": lat, "type": t["type"],
         "severity": t["severity"], "metals": t["metals"], "title": t["title"][:200], "summary": t["summary"][:1200],
-        "corridors": t["corridor_ids"], "asset_ids": t["asset_ids"], "status": review_status(t),
+        "corridors": t["corridor_ids"], "asset_ids": t["asset_ids"], "status": review_status(t, ref),
         "confidence": round(t["confidence"], 2), "source_urls": [raw["url"]] if raw.get("url") else [],
         "sector": sector_of(t["metals"]),
         "region": region_of(t["country_iso3"], ref),
