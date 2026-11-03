@@ -1,4 +1,7 @@
 # Runs the collector on GitHub's servers every hour.
+# Free private repos include 2,000 Actions minutes a month; hourly runs use roughly 750-1,500 of them.
+# For every 30 minutes, change the cron line to "7,37 * * * *" (may need a paid plan or a public repo).
+# Add your keys under GitHub repo > Settings > Secrets and variables > Actions.
 name: Collect and alert
 
 on:
