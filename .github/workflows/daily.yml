@@ -1,0 +1,36 @@
+# Daily digest email at 06:13 UTC, and a sanctions screen every Monday.
+name: Daily digest and weekly sanctions screen
+
+on:
+  schedule:
+    - cron: "13 6 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      RESEND_API_KEY: ${{ secrets.RESEND_API_KEY 574c6514879cbf0d86e11f0c6d841a34979516e2}}
+      ALERT_FROM: ${{ secrets.ALERT_FROM }}
+      ADMIN_EMAIL: ${{ secrets.ADMIN_EMAIL }}
+      SITE_URL: ${{ secrets.SITE_URL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: python -m collector digest
+      - run: python -m collector prices
+        env:
+          EIA_API_KEY: ${{ secrets.EIA_API_KEY }}
+      - name: Sanctions screen (Mondays, or when run by hand)
+        run: |
+          if [ "$(date -u +%u)" = "1" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then python -m collector sanctions; else echo "Not Monday, skipping"; fi
+      - name: Prune vessels not seen for two weeks (Sundays)
+        run: |
+          if [ "$(date -u +%u)" = "7" ]; then python relay/ais_relay.py --prune; else echo "Not Sunday, skipping"; fi
