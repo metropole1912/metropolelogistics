@@ -1,0 +1,3 @@
+# Vessel names to screen against OFAC's sanctioned-vessel entries, one per line.
+# Add the tankers and bulk carriers your clients nominate or charter.
+# Lines starting with # are ignored.

@@ -1,0 +1,3 @@
+# Extra names to screen against sanctions lists, one per line:
+# counterparties, intermediaries, shipping companies, offtakers.
+# Lines starting with # are ignored.

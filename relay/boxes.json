@@ -1,0 +1,10 @@
+{
+  "_comment": "Bounding boxes sent to aisstream.io as [[lat_min, lon_min], [lat_max, lon_max]]. Fewer, larger boxes are fine; the relay filters by ship type afterwards. Edit freely.",
+  "boxes": [
+    [[-40, -25], [40, 60]],
+    [[10, 32], [31, 62]],
+    [[-60, -95], [15, -25]],
+    [[5, -92], [28, -58]]
+  ],
+  "_names": ["Africa and the Mediterranean, Atlantic to Indian Ocean", "Gulf, Red Sea and Arabian Sea", "South America, Pacific and Atlantic", "Caribbean and Panama"]
+}

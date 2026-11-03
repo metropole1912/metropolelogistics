@@ -1,0 +1,25 @@
+{
+ "response": {
+  "total": "3",
+  "data": [
+   {
+    "period": "2026-10-30",
+    "series": "RBRTE",
+    "value": "61.42",
+    "units": "$/BBL"
+   },
+   {
+    "period": "2026-10-29",
+    "series": "RBRTE",
+    "value": "60.90",
+    "units": "$/BBL"
+   },
+   {
+    "period": "2026-10-28",
+    "series": "RBRTE",
+    "value": "62.15",
+    "units": "$/BBL"
+   }
+  ]
+ }
+}

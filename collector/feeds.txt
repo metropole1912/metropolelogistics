@@ -1,0 +1,30 @@
+# One RSS or Atom feed URL per line. Lines starting with # are ignored.
+#
+# Google News searches (free, no key). Edit or add your own: replace the words after q=
+# (use + between words, %22 around exact phrases).
+https://news.google.com/rss/search?q=Kasumbalesa+OR+Copperbelt+OR+Kolwezi+when:2d&hl=en-US&gl=US&ceid=US:en
+https://news.google.com/rss/search?q=Congo+cobalt+export+OR+quota+when:2d&hl=en-US&gl=US&ceid=US:en
+https://news.google.com/rss/search?q=Zambia+copper+mine+when:2d&hl=en-US&gl=US&ceid=US:en
+https://news.google.com/rss/search?q=Mali+OR+%22Burkina+Faso%22+OR+Niger+gold+mine+when:2d&hl=en-US&gl=US&ceid=US:en
+https://news.google.com/rss/search?q=Guinea+bauxite+OR+Simandou+when:2d&hl=en-US&gl=US&ceid=US:en
+https://news.google.com/rss/search?q=Zimbabwe+lithium+OR+platinum+when:2d&hl=en-US&gl=US&ceid=US:en
+https://news.google.com/rss/search?q=Lobito+corridor+OR+Transnet+OR+%22Dar+es+Salaam+port%22+when:2d&hl=en-US&gl=US&ceid=US:en
+# Energy
+https://news.google.com/rss/search?q=Nigeria+crude+OR+Dangote+OR+%22Trans+Niger%22+when:2d&hl=en-US&gl=US&ceid=US:en
+https://news.google.com/rss/search?q=Libya+oil+OR+Sharara+OR+%22National+Oil+Corporation%22+when:2d&hl=en-US&gl=US&ceid=US:en
+https://news.google.com/rss/search?q=Algeria+Sonatrach+OR+Egypt+LNG+OR+Zohr+when:2d&hl=en-US&gl=US&ceid=US:en
+https://news.google.com/rss/search?q=EACOP+OR+%22Mozambique+LNG%22+OR+%22Coral+Sul%22+OR+Tortue+LNG+when:2d&hl=en-US&gl=US&ceid=US:en
+https://news.google.com/rss/search?q=%22Strait+of+Hormuz%22+OR+%22Red+Sea%22+tanker+OR+Houthi+shipping+when:2d&hl=en-US&gl=US&ceid=US:en
+https://news.google.com/rss/search?q=%22Suez+Canal%22+transits+OR+%22Cape+of+Good+Hope%22+diversion+when:2d&hl=en-US&gl=US&ceid=US:en
+# South America
+https://news.google.com/rss/search?q=Codelco+OR+Escondida+OR+%22Las+Bambas%22+OR+Antofagasta+copper+when:2d&hl=en-US&gl=US&ceid=US:en
+https://news.google.com/rss/search?q=lithium+Argentina+OR+Chile+OR+Bolivia+when:2d&hl=en-US&gl=US&ceid=US:en
+https://news.google.com/rss/search?q=Vale+Carajas+OR+%22iron+ore%22+Brazil+OR+%22Cobre+Panama%22+when:2d&hl=en-US&gl=US&ceid=US:en
+https://news.google.com/rss/search?q=Venezuela+oil+OR+PDVSA+OR+Chevron+Venezuela+when:2d&hl=en-US&gl=US&ceid=US:en
+https://news.google.com/rss/search?q=Guyana+oil+OR+Stabroek+OR+Petrobras+OR+%22Vaca+Muerta%22+when:2d&hl=en-US&gl=US&ceid=US:en
+https://news.google.com/rss/search?q=%22Panama+Canal%22+OR+Ecopetrol+pipeline+OR+Petroecuador+OR+%22Trinidad%22+LNG+when:2d&hl=en-US&gl=US&ceid=US:en
+#
+# Good things to add later (find the RSS link on each site and paste it here):
+#   - Stock exchange announcement feeds for the miners you track (JSE SENS, ASX, TSX, LSE RNS)
+#   - Company investor-news pages (Ivanhoe, First Quantum, Barrick, Glencore, ERG, Zijin ...)
+#   - Mining news sites with RSS (Mining Weekly, Mining.com, etc.)

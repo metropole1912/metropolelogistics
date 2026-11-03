@@ -1,0 +1,42 @@
+{
+ "totalCount": 2,
+ "count": 2,
+ "data": [
+  {
+   "id": 900001,
+   "score": 1,
+   "fields": {
+    "title": "SAMPLE: Democratic Republic of the Congo - Fighting near Goma disrupts mineral trade routes",
+    "url_alias": "https://reliefweb.example.org/report/sample-1",
+    "date": {
+     "created": "2026-11-02T08:32:39.121288+00:00"
+    },
+    "country": [
+     {
+      "iso3": "cod",
+      "name": "Democratic Republic of the Congo"
+     }
+    ],
+    "body": "Clashes between M23 and armed groups near Rubaya have halted coltan movements toward Goma and the Rwanda border."
+   }
+  },
+  {
+   "id": 900002,
+   "score": 1,
+   "fields": {
+    "title": "SAMPLE: Madagascar - Cyclone season outlook",
+    "url_alias": "https://reliefweb.example.org/report/sample-2",
+    "date": {
+     "created": "2026-11-02T07:32:39.121288+00:00"
+    },
+    "country": [
+     {
+      "iso3": "mdg",
+      "name": "Madagascar"
+     }
+    ],
+    "body": "Seasonal forecast for the island's coastal communities."
+   }
+  }
+ ]
+}

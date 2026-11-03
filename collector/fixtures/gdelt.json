@@ -1,0 +1,84 @@
+{
+ "articles": [
+  {
+   "url": "https://sample-news-a.example.com/article-0",
+   "url_mobile": "",
+   "title": "SAMPLE: Truck queues stretch 30km at Kasumbalesa border as Congo copper exports surge",
+   "seendate": "20261102T153239Z",
+   "socialimage": "",
+   "domain": "sample-news-a.example.com",
+   "language": "English",
+   "sourcecountry": "Sample"
+  },
+  {
+   "url": "https://sample-news-b.example.com/article-1",
+   "url_mobile": "",
+   "title": "SAMPLE: Copper trucks stuck for days at Kasumbalesa crossing between Congo and Zambia",
+   "seendate": "20261102T143239Z",
+   "socialimage": "",
+   "domain": "sample-news-b.example.com",
+   "language": "English",
+   "sourcecountry": "Sample"
+  },
+  {
+   "url": "https://sample-news-c.example.com/article-2",
+   "url_mobile": "",
+   "title": "SAMPLE: Congo regulator revises cobalt export quota allocations for 2027",
+   "seendate": "20261102T133239Z",
+   "socialimage": "",
+   "domain": "sample-news-c.example.com",
+   "language": "English",
+   "sourcecountry": "Sample"
+  },
+  {
+   "url": "https://sample-news-d.example.com/article-3",
+   "url_mobile": "",
+   "title": "SAMPLE: Gunmen attack fuel convoy on Dakar-Bamako road, Mali gold mines warn of diesel shortages",
+   "seendate": "20261102T123239Z",
+   "socialimage": "",
+   "domain": "sample-news-d.example.com",
+   "language": "English",
+   "sourcecountry": "Sample"
+  },
+  {
+   "url": "https://sample-news-e.example.com/article-4",
+   "url_mobile": "",
+   "title": "SAMPLE: Zambia football team wins regional cup in Lusaka",
+   "seendate": "20261102T113239Z",
+   "socialimage": "",
+   "domain": "sample-news-e.example.com",
+   "language": "English",
+   "sourcecountry": "Sample"
+  },
+  {
+   "url": "https://sample-news-f.example.com/article-5",
+   "url_mobile": "",
+   "title": "SAMPLE: Gold price edges higher as dollar weakens",
+   "seendate": "20261102T113239Z",
+   "socialimage": "",
+   "domain": "sample-news-f.example.com",
+   "language": "English",
+   "sourcecountry": "Sample"
+  },
+  {
+   "url": "https://sample-news-g.example.com/article-6",
+   "url_mobile": "",
+   "title": "SAMPLE: Guinea revokes another bauxite mining licence in Boke region",
+   "seendate": "20261102T103239Z",
+   "socialimage": "",
+   "domain": "sample-news-g.example.com",
+   "language": "English",
+   "sourcecountry": "Sample"
+  },
+  {
+   "url": "https://sample-news-h.example.com/article-7",
+   "url_mobile": "",
+   "title": "SAMPLE: Lobito Atlantic Railway adds new locomotives to carry more copper from Kolwezi",
+   "seendate": "20261102T093239Z",
+   "socialimage": "",
+   "domain": "sample-news-h.example.com",
+   "language": "English",
+   "sourcecountry": "Sample"
+  }
+ ]
+}
